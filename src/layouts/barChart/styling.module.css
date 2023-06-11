@@ -1,0 +1,261 @@
+
+
+.barChartTitle{
+    width : 100%;
+    height : 100%;
+    overflow: hidden;
+    color: gray;
+    position: relative;
+}
+.barChartContainer{
+    width :100%;
+    height : 85%;
+    box-sizing: border-box;
+    padding: 5%;
+    display : grid;
+    gap : 1%;
+    overflow: hidden;
+}
+
+.CategoryItemContainer{
+    width :100%;
+    vertical-align: top;
+    /* overflow: hidden; */
+    height : 100%;
+    position: relative;
+    white-space: nowrap ;
+    overflow: hidden;
+    /* display: inline-block; */
+    display : inline-flex;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    /* background-color: red; */
+    /* background-color: black; */
+}
+
+.CategoryItemElementContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.CategoryItemElementIndicator{
+    display : grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 55;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    /* background-color: rgba(255, 0, 0, 0.2); */
+    width: 100%;
+    height: 50px;
+    transition : opacity 0.5s;
+    
+}
+.CategoryTitle{
+    /* font-Size :clamp(10px, 2vw, 100px); */
+    cursor: pointer;
+    display :inline-block;
+    margin :0px;
+    position :relative;
+    font-Weight :900;
+    /* padding-left: 1%; */
+    box-sizing: border-box;
+    /* font-Size :clamp(10px, 4vw, 100px); */
+    /* background-color: blueviolet; */
+}
+
+.CategoryItemElement{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-content: center;
+    align-items: center;
+}
+
+.CategoryItemElementTitle{
+    position: relative;
+    padding: 2%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color : #333;
+    font-size : clamp(10px, 2.5vw, 30px);
+}
+.CategoryItemElementBar{
+    padding-right: 5%;
+    padding-left: 5%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    width: 100%;
+    min-height: 33.3%;
+}
+@media only screen and (min-width: 1051px) {
+
+    .CategoryItemElementBar {
+        height: 80px;       
+        /* background-color: blue; */
+    }
+    .barChartContainer{
+        grid-template-rows: 3% 6% 3% 88%;
+    }
+
+    .CategoryItemElement{
+        min-height: 33.3%;
+    }
+}
+@media only screen and (max-width: 1051px) {
+    .CategoryItemElementBar {
+        height: 60px;
+        /* background-color: red; */
+    }
+    .CategoryItemElement{
+        min-height: 25%;
+
+    }
+   .barChartContainer{
+        grid-template-rows: 3% 5% 3% 89%;
+    }
+
+
+  }
+  @media only screen and (max-width: 600px) {
+    .CategoryItemElementBar {
+        height: 50px;
+        /* background-color: red; */
+    }
+    .CategoryItemElement{
+        min-height: 20%;
+
+    }
+    .barChartContainer{
+        grid-template-rows: 3% 3% 3% 89%;
+    }
+    /* .CategoryTitle{
+        font-size : clamp(1px, 4vw, 80px);
+
+    } */
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .CategoryItemElementBar {
+        height: 50px;
+        
+    }
+    .CategoryItemElement{
+        /* background-color: red; */
+        min-height: 15%;
+    }
+    .barChartContainer{
+        overflow: hidden;
+        /* background-color: red; */
+        grid-template-rows: 1% 2% 1% 96%;
+    } 
+}
+.line{
+    position: absolute;
+    background-color: grey;
+    width: 100%;
+    height: 1px;
+}
+
+.errorPrompt{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    text-align: center;
+}
+
+.arrowdown {
+    width: 100%;
+    padding-top : 100%;
+    border: 15px solid #333;
+    border-left: 0;
+    border-top: 0;
+    transform: translate(0, 100%) rotate(45deg);
+    position:relative;
+    animation: arrowdownAnimate 5s infinite;
+
+}
+@keyframes arrowdownAnimate {
+    0% {
+        transform: translate(0, 0%) rotate(45deg);
+    }
+    1% {
+        transform: translate(0, 0%) rotate(45deg);
+
+    }
+    54% {
+        transform: translate(0, 100%) rotate(45deg);
+
+    }
+    55% {
+        transform: translate(0, 100%) rotate(45deg);
+        /* bottom :0px; */
+
+    }
+    99% {
+        transform: translate(0, 0%) rotate(45deg);
+    }
+    100% {
+        transform: translate(0, 0%) rotate(45deg);
+    }
+}
+
+.animatingImageContainer
+{
+    transform: translate(0, -100%);
+    width: 12%;
+    height: 12%;
+    position: absolute;
+    z-index: 9;
+    right: 0px;
+    display: grid;
+    justify-items: center;
+}
+.animatingImage{
+    height: 90%;
+    width: 50%;
+    right:0px;
+    position: absolute;
+    animation: animateImage 5s infinite;
+}
+@keyframes animateImage {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    1% {
+        transform: translate(0%, 0%);
+
+    }
+    54% {
+        transform: translate(0%, 10%);
+
+    }
+    55% {
+        transform: translate(0%, 10%);
+        /* bottom :0px; */
+
+    }
+    99% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform:translate(0%, 0%);
+    }
+}
+    

@@ -1,0 +1,36 @@
+
+
+
+/* @media only screen and (min-width: 1051px) {
+    #ProfileBanner_Container {
+        width: 100vw;
+        height: 1500px;
+    }
+  } */
+
+  @media screen and (orientation: landscape) {
+    #ProfileBanner_Container {
+        width: 100vw;
+        height: 100vh;
+    } 
+  }
+  
+
+  @media screen and (orientation: portrait) {
+    #ProfileBanner_Container {
+        width: 100vw;
+        height: 50vw;
+    } 
+  }
+
+
+
+
+  
+  #ProfileBanner_Container{ 
+    padding:2%;
+    box-sizing: border-box;
+  }
+  #projectContainer{ 
+    margin-top: 100px;
+  }

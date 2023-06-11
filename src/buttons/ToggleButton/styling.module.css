@@ -1,0 +1,81 @@
+
+.switchbutton {
+  box-sizing: border-box;
+  background-color: white;
+  /* background-color: blue; */
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size:var(--FontSizing);
+  letter-spacing: 1px;
+  position: relative;
+  padding-right: var(--halfSize); /* must be relative to 50% width. */
+  position: relative;
+  border-color: grey;
+  border: 1px solid;
+}
+
+.switchbutton::before {
+  box-sizing: border-box;
+  content: var(--button2Title);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width:var(--halfSize);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+  transition: color 1s;
+
+  color : var(--selectedColorButton2);
+}
+
+.switchbuttoncheckbox {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+.switchbuttoncheckbox:checked + .switchbuttonlabel:before {
+  transform: translateX(var(--halfSize)); /* This has to be relative to 50% of width */
+  transition: transform 300ms linear;
+}
+.switchbuttoncheckbox + .switchbuttonlabel {
+  position: relative;
+  padding: 15px 0;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+.switchbuttoncheckbox + .switchbuttonlabel:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transform: translateX(0);
+  transition: transform 300ms;
+  box-sizing: border-box;
+  background-color: black;
+}
+.switchbuttoncheckbox + .switchbuttonlabel .switchbuttonlabelspan {
+  position: relative;
+}
+
+.switchbuttonlabel{
+  transition: color 1s;
+  color : var(--selectedColorButton1);
+}

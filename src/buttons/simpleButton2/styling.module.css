@@ -1,0 +1,17 @@
+.arrow {
+    position: absolute;
+    box-shadow: 1px -1px 0 1px gray inset;
+    -webkit-box-shadow: 2px -2px gray inset;
+    border: solid transparent;
+    transition: 0.2s;
+    left: 10%;
+}
+
+.arrow:hover {
+    box-shadow: 2px -2px 0 2px gray inset;
+    -webkit-box-shadow: 4px -4px gray inset;
+}
+
+/* .arrow { top:50%;margin:-67px 0 0 -67px;left:35% }
+a:nth-child(2) { left:65% } */
+

@@ -1,0 +1,21 @@
+
+.ScrollBarTitles{
+
+}
+
+.ScrollBarTitles a{
+    text-decoration: none;
+    transition : color 0.1;
+    color: grey;
+    
+
+}
+.ScrollBarTitles a:visited {
+    text-decoration: none;
+    
+}
+.ScrollBarTitles a:hover {
+    color: grey;
+    
+    
+}

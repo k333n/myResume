@@ -1,0 +1,39 @@
+.arrowdown {
+  /* width: 100%;
+  padding-top : 100%;
+    border: 15px solid #333;
+    animation: arrowdownAnimate 5s infinite; */
+     width: 50%;
+    height: 50%;
+    border: 1px solid #757575;
+    box-sizing: border-box;
+    transform: translate(0, 0%) rotate(45deg);
+    border-left: 0;
+    border-top: 0;
+    position:relative;
+    animation: arrowdownAnimate 5s infinite;
+}
+@keyframes arrowdownAnimate {
+  0% {
+      transform: translate(0, -0%) rotate(45deg);
+  }
+  1% {
+      transform: translate(0, -0%) rotate(45deg);
+
+  }
+  54% {
+      transform: translate(0, 25%) rotate(45deg);
+
+  }
+  55% {
+      transform: translate(0, 25%) rotate(45deg);
+      /* bottom :0px; */
+
+  }
+  99% {
+      transform: translate(0, 0%) rotate(45deg);
+  }
+  100% {
+      transform: translate(0, 0%) rotate(45deg);
+  }
+}

@@ -1,0 +1,36 @@
+
+.closebtn {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  background: #FF5D5B;
+  border: var(--lineSize) solid #CF544D;
+  box-sizing: border-box;
+}
+
+.closebtn:before, .closebtn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--lineSize) ;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  width: var(--lineSize) ;
+  height: 70%;
+  background: #460100;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+
+}
+
+.closebtn:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.closebtn:hover::before, .closebtn:hover::after{
+  opacity: 1;
+}

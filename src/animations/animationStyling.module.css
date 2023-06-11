@@ -1,0 +1,42 @@
+.leftTransition
+{
+    width :100%;
+    height : 100%;
+    z-index: 1;
+    transform: translate(-100%);
+    animation: slide 1s forwards;
+}
+
+@keyframes slide
+{
+    100% { 
+            transform: translate(0%); 
+        }
+}
+
+/* .circle{ */
+    /* float: left; */
+    /* width: 5%; */
+    /* height: 5%; */
+    /* margin: 20px; */
+    /* shape-outside: circle();
+    clip-path: circle();
+    background: lightblue;
+    animation: shape-animation 1s forwards;
+} */
+
+
+/* @keyframes shape-animation {
+    0% {
+      shape-outside: square();
+    }
+    50% {
+      shape-outside: circle();
+    }
+    100% {
+      shape-outside: square();
+    }
+  } */
+
+  
+  
